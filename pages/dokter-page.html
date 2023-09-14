@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/dokter-page.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="mainHeader">
+        <img src="../image/umum/logo.png" alt="Serenity">
+        <a id="back-buttonhead" href="./poli-page.html" title="back">&laquo;</a>
+    </header>
+    <div id="errorpage">404 Not Found</div>
+    <main id="maincontent">
+        <h1 id="titletext" class="title">DOKTER</h1>
+        <div class="all-dokter-container"></div>
+        <h1 class="title">PENDAFTARAN RAWAT JALAN</h1>
+        <a id="sticky-daftar" href="#formdt"><span>&#8964;&#8964;</span>DAFTAR<span>&#8964;&#8964;</span></a>
+        <div id="formct" class="form-container">
+            <form id="formdt" class="formdokter" action="" method="post">
+                <label for="poli">Poli:</label>
+                <input type="text" id="poliinput" name="poli" value="Poli Anda" readonly>
+                <br>
+        
+                <label for="dokter">Dokter:</label>
+                <select id="dokterinput" name="dokter">
+                </select>
+                <br>
+        
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="namalengkap" name="nama" required>
+                <br>
+        
+                <label for="tanggal">Tanggal:</label>
+                <input type="date" id="tanggaldaftar" name="tanggal" required>
+                <br>
+
+                <label>Pilih Jam:</label>
+                <div id="jaminput">
+                    <input type="radio" id="pilihan1" name="waktu" value="08:00-11:00" required>
+                    <label for="pilihan1">08:00-11:00</label>
+                    <input type="radio" id="pilihan2" name="waktu" value="14:00-17:00">
+                    <label for="pilihan2">14:00-17:00</label>
+                </div>
+                <br>
+        
+                <input type="submit" id="subbutton" value="Daftar">
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2023 SerenityMed Hospital. All rights reserved</p>
+    </footer>
+    <script src="../script/header.js"></script>
+    <script src="../script/dokter-form.js"></script>
+</body>
+
+</html>

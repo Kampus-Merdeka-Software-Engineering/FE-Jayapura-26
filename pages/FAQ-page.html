@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions</title>
+  <link rel="stylesheet" href="../style/FAQ-page.css" />
+  <link rel="stylesheet" href="../style/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+  <header id="mainHeader">
+    <img src="../image/umum/logo.png" alt="Serenity">
+    <button id="navres-button">
+        <img src="../image/icon/menu.svg" alt="">
+        <nav id="navigation-bar-responsive">
+            <a title="Home" href="../index.html">Home</a>
+            <a title="Poli" href="./poli-page.html">Poli</a>
+            <a title="FAQ" href="#">FAQ</a>
+            <a title="About" href="./about-page.html">About</a>
+            <a title="Team" href="./Team-page.html">Team</a>
+        </nav>
+    </button>
+    <nav class="navigation-bar-link">
+        <a class="navigation-button" id="home-nav" title="Home" href="../index.html">Home</a>
+        <a class="navigation-button" id="poli-nav" title="Poli" href="./poli-page.html">Poli</a>
+        <a class="navigation-button" id="faq-nav" title="FAQ" href="#">FAQ</a>
+        <a class="navigation-button" id="about-nav" title="About" href="./about-page.html">About</a>
+        <a class="navigation-button" id="team-nav" title="Team" href="./Team-page.html">Team</a>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq">
+      <button class="accordion">
+        Jam berapa operasional rumah sakit ini?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Rumah sakit kami buka 24 jam sehari, 7 hari seminggu, termasuk hari libur. Anda dapat datang kapan saja untuk
+          mendapatkan perawatan medis.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        Bagaimana cara membuat janji temu dengan dokter?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Anda dapat membuat janji temu dengan dokter kami dengan menghubungi pusat pendaftaran kami pada menu poli.
+          Kami juga menyediakan layanan darurat tanpa janji temu.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        Apakah rumah sakit ini menerima asuransi kesehatan?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Ya, kami menerima sebagian besar jenis asuransi kesehatan. Silakan hubungi kontak kami untuk informasi lebih
+          lanjut atau periksa apakah rumah sakit kami adalah penyedia dalam jaringan Anda.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        Apakah ada fasilitas parkir yang tersedia?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Ya, kami memiliki fasilitas parkir yang luas dan aman di sekitar rumah sakit kami. Parkir tersedia untuk
+          pasien dan pengunjung dengan tarif yang wajar.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        Bagaimana saya bisa mencari informasi tentang dokter dan spesialis di rumah sakit ini?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Anda dapat mencari daftar dokter dan spesialis kami di situs web kami. Setiap profil dokter akan mencakup
+          informasi tentang spesialisasi, jam kerja, dan cara menghubungi mereka.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        Apa yang harus saya bawa saat saya datang ke rumah sakit untuk pemeriksaan?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Saat datang untuk pemeriksaan atau perawatan, pastikan untuk membawa identifikasi diri yang valid, kartu
+          asuransi kesehatan (jika berlaku), catatan medis terakhir, dan daftar obat-obatan yang Anda konsumsi.
+        </p>
+      </div>
+    </div>
+    <div class="faq">
+      <button class="accordion">
+        Apakah rumah sakit ini menyediakan layanan darurat?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          Ya, kami memiliki unit gawat darurat yang buka 24 jam. Untuk keadaan darurat, segera datang ke rumah sakit
+          atau hubungi kontak kami untuk mendapatkan bantuan medis segera.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>© 2023 SerenityMed Hospital. All rights reserved</p>
+  </footer>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        this.parentElement.classList.toggle("active");
+
+        var pannel = this.nextElementSibling;
+
+        if (pannel.style.display === "block") {
+          pannel.style.display = "none";
+        } else {
+          pannel.style.display = "block";
+        }
+      });
+    }
+  </script>
+  <script src="../script/header.js"></script>
+
+</body>
+
+</html>

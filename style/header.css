@@ -1,0 +1,114 @@
+/* header navigation bar */
+
+#mainHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 3vw;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    transition: transform ease-in-out 0.7s;
+    z-index: 200;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.scroll-up {
+    transform: translateY(-100%);
+}
+
+#mainHeader img{
+    width: 295.2px;
+    object-fit: contain;
+}
+
+.navigation-bar-link{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation-button{
+    height: 35px;
+    width: 100px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 20px;
+    border-bottom: solid 2px #4473c400;
+    transition: ease-in-out 0.5s;
+}
+
+.navigation-button:hover{
+    border-bottom: solid 2px #4472c4;
+}
+
+#team-nav{
+    background-color: #4472c4;
+    color: white;
+    border-radius: 20px;
+    outline: solid 2px #4472c4;
+    outline-offset: -2px;
+    transition: ease-in-out 0.2s;
+}
+
+#team-nav:hover{
+    outline: solid 2px #4472c4;
+    outline-offset: 4px;
+}
+
+#navres-button{
+    object-fit: contain;
+    display: none;
+}
+
+#navres-button img{
+    width: 40px;
+    background-color: white;
+}
+
+#navigation-bar-responsive{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 66.8px;
+    flex-direction: column;
+    height: auto;
+    transition: ease-in-out 0.7s;
+}
+
+.navres-onscrl{
+    transform: translateX(150%);
+}
+
+#navigation-bar-responsive a{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: rgb(42, 137, 215);
+    padding: 5px;
+    padding-right: 20px;
+    width: 25vw;
+    height: 40px;
+    text-decoration: none;
+    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+}
+
+#navigation-bar-responsive a:nth-child(odd){
+    background-color: rgb(234, 234, 234);
+}
+
+
+@media (max-width:937px) {
+    .navigation-bar-link{
+        display: none;
+    }
+    #navres-button{
+        display: block;
+    }
+}
+
+/* end of navigation bar and header */
