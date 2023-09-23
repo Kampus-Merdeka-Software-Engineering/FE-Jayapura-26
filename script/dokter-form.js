@@ -1,37 +1,288 @@
 var poliData = {
     poliumum: [
-        { nama: "dr.Rudi Setiawan", spesialisasi: "Dokter Umum", exp:"5 Tahun", like:"90%" ,ppimg:"../image/Dokter Umum/16.png" },
-        { nama: "dr.Dewi Handayani", spesialisasi: "Dokter Umum", exp:"3 Tahun", like:"98%" ,ppimg:"../image/Dokter Umum/25.png" },
-        { nama: "dr.Aditya Prabowo", spesialisasi: "Dokter Umum", exp:"12 Tahun", like:"89%" ,ppimg:"../image/Dokter Umum/18.png" },
-        { nama: "dr.Hendra Wijaya", spesialisasi: "Dokter Umum", exp:"8 Tahun", like:"87%" ,ppimg:"../image/Dokter Umum/19.png" },
-        { nama: "dr.Yulia Safitri", spesialisasi: "Dokter Umum", exp:"10 Tahun", like:"89%" ,ppimg:"../image/Dokter Umum/22.png" },
+        {
+            nama: "dr.Rudi Setiawan",
+            spesialisasi: "Dokter Umum",
+            exp: "5 Tahun",
+            like: "90%",
+            ppimg: "../image/Dokter Umum/16.png",
+            jadwal: [
+                ["Senin", "08.00-12.00"],
+                ["Selasa", "08.00-12.00"],
+                ["Rabu", "08.00-12.00"],
+                ["Kamis", "17.00-21.00"]
+            ]
+        },
+        {
+            nama: "dr.Dewi Handayani",
+            spesialisasi: "Dokter Umum",
+            exp: "3 Tahun",
+            like: "98%",
+            ppimg: "../image/Dokter Umum/25.png",
+            jadwal: [
+                ["Senin", "13.00-17.00"],
+                ["Selasa", "13.00-17.00"],
+                ["Rabu", "13.00-17.00"],
+                ["Jumat", "17.00-21.00"]
+            ]
+        },
+        {
+            nama: "dr.Aditya Prabowo",
+            spesialisasi: "Dokter Umum",
+            exp: "12 Tahun",
+            like: "89%",
+            ppimg: "../image/Dokter Umum/18.png",
+            jadwal: [
+                ["Senin", "17.00-21.00"],
+                ["Selasa", "17.00-21.00"],
+                ["Rabu", "17.00-21.00"]
+            ]
+        },
+        {
+            nama: "dr.Hendra Wijaya",
+            spesialisasi: "Dokter Umum",
+            exp: "8 Tahun",
+            like: "87%",
+            ppimg: "../image/Dokter Umum/19.png",
+            jadwal: [
+                ["Kamis", "08.00-12.00"],
+                ["Jumat", "08.00-12.00"]
+            ]
+        },
+        {
+            nama: "dr.Yulia Safitri",
+            spesialisasi: "Dokter Umum",
+            exp: "10 Tahun",
+            like: "89%",
+            ppimg: "../image/Dokter Umum/22.png",
+            jadwal: [
+                ["Kamis", "13.00-17.00"],
+                ["Jumat", "13.00-17.00"]
+            ]
+        }
     ],
     poligigi: [
-        { nama: "dr. Budi Prasetyo, Sp.Ort", spesialisasi: "Spesialis Ortodonti", exp: "5 Tahun", like: "85%", ppimg: "../image/Dokter spesialis/dokter-gigi-1.png" },
-        { nama: "dr. Siti Rahayu, Sp.Perio", spesialisasi: "Spesialis Periodonti", exp: "6 Tahun", like: "92%", ppimg: "../image/Dokter spesialis/dokter-gigi-2.png" },
-        { nama: "dr. Andi Wibowo, Sp.Pros", spesialisasi: "Spesialis Prostodonti", exp: "12 Tahun", like: "98%", ppimg: "../image/Dokter spesialis/dokter-gigi-3.png" },
+        {
+            nama: "dr. Budi Prasetyo, Sp.Ort",
+            spesialisasi: "Spesialis Ortodonti",
+            exp: "5 Tahun",
+            like: "85%",
+            ppimg: "../image/Dokter spesialis/dokter-gigi-1.png",
+            jadwal: [
+                ["Senin", "08.00-12.00"],
+                ["Selasa", "08.00-12.00"],
+                ["Rabu", "08.00-12.00"],
+                ["Kamis", "08.00-12.00"],
+                ["Jumat", "08.00-12.00"]
+            ]
+        },
+        {
+            nama: "dr. Siti Rahayu, Sp.Perio",
+            spesialisasi: "Spesialis Periodonti",
+            exp: "6 Tahun",
+            like: "92%",
+            ppimg: "../image/Dokter spesialis/dokter-gigi-2.png",
+            jadwal: [
+                ["Senin", "13.00-17.00"],
+                ["Selasa", "13.00-17.00"],
+                ["Rabu", "13.00-17.00"],
+                ["Kamis", "13.00-17.00"],
+                ["Jumat", "13.00-17.00"]
+            ]
+        },
+        {
+            nama: "dr. Andi Wibowo, Sp.Pros",
+            spesialisasi: "Spesialis Prostodonti",
+            exp: "12 Tahun",
+            like: "98%",
+            ppimg: "../image/Dokter spesialis/dokter-gigi-3.png",
+            jadwal: [
+                ["Senin", "17.00-21.00"],
+                ["Selasa", "17.00-21.00"],
+                ["Rabu", "17.00-21.00"],
+                ["Kamis", "17.00-21.00"],
+                ["Jumat", "17.00-21.00"]
+            ]
+        }
     ],
     polianak: [
-        { nama: "dr. Anisa Indriani, Sp.A", spesialisasi: "Spesialis Anak", exp: "4 Tahun", like: "95%", ppimg: "../image/Dokter spesialis/dokter-anak-1.png" },
-        { nama: "dr. Dian Purnama, Sp.KJ", spesialisasi: "Spesialis Kesehatan Jiwa", exp: "7 Tahun", like: "90%", ppimg: "../image/Dokter spesialis/dokter-anak-2.png" },
-        { nama: "dr. Rini Cahyati, Sp.THT-KL", spesialisasi: "Spesialis Telinga Hidung Tenggorokan-Kepala Leher", exp: "5 Tahun", like: "93%", ppimg: "../image/Dokter spesialis/dokter-anak-3.png" },
+        {
+            nama: "dr. Anisa Indriani, Sp.A",
+            spesialisasi: "Spesialis Anak",
+            exp: "4 Tahun",
+            like: "95%",
+            ppimg: "../image/Dokter spesialis/dokter-anak-1.png",
+            jadwal: [
+                ["Senin", "08.00-12.00"],
+                ["Selasa", "08.00-12.00"],
+                ["Rabu", "08.00-12.00"],
+                ["Kamis", "08.00-12.00"],
+                ["Jumat", "08.00-12.00"]
+            ]
+        },
+        {
+            nama: "dr. Dian Purnama, Sp.KJ",
+            spesialisasi: "Spesialis Kesehatan Jiwa",
+            exp: "7 Tahun",
+            like: "90%",
+            ppimg: "../image/Dokter spesialis/dokter-anak-2.png",
+            jadwal: [
+                ["Senin", "13.00-17.00"],
+                ["Selasa", "13.00-17.00"],
+                ["Rabu", "13.00-17.00"],
+                ["Kamis", "13.00-17.00"],
+                ["Jumat", "13.00-17.00"]
+            ]
+        },
+        {
+            nama: "dr. Rini Cahyati, Sp.THT-KL",
+            spesialisasi: "Spesialis Telinga Hidung Tenggorokan-Kepala Leher",
+            exp: "5 Tahun",
+            like: "93%",
+            ppimg: "../image/Dokter spesialis/dokter-anak-3.png",
+            jadwal: [
+                ["Senin", "17.00-21.00"],
+                ["Selasa", "17.00-21.00"],
+                ["Rabu", "17.00-21.00"],
+                ["Kamis", "17.00-21.00"],
+                ["Jumat", "17.00-21.00"]
+            ]
+        }
     ],
     polipdalam: [
-        { nama: "dr. Tri Haryanto, Sp.PD", spesialisasi: "Spesialis Penyakit Dalam", exp: "9 Tahun", like: "96%", ppimg: "../image/Dokter spesialis/dokter-penyakitdalam-1.png" },
-        { nama: "dr. Rina Wijaya, Sp.GK", spesialisasi: "Spesialis Gizi Klinis", exp: "12 Tahun", like: "94%", ppimg: "../image/Dokter spesialis/dokter-penyakitdalam-2.png" },
-        { nama: "dr. Siti Rahmawati, Sp.PD", spesialisasi: "Spesialis Penyakit Dalam", exp: "5 Tahun", like: "88%", ppimg: "../image/Dokter spesialis/dokter-penyakitdalam-3.png" },
+        {
+            nama: "dr. Tri Haryanto, Sp.PD",
+            spesialisasi: "Spesialis Penyakit Dalam",
+            exp: "9 Tahun",
+            like: "96%",
+            ppimg: "../image/Dokter spesialis/dokter-penyakitdalam-1.png",
+            jadwal: [
+                ["Senin", "08.00-12.00"],
+                ["Selasa", "08.00-12.00"],
+                ["Rabu", "08.00-12.00"],
+                ["Kamis", "08.00-12.00"],
+                ["Jumat", "08.00-12.00"]
+            ]
+        },
+        {
+            nama: "dr. Rina Wijaya, Sp.GK",
+            spesialisasi: "Spesialis Gizi Klinis",
+            exp: "12 Tahun",
+            like: "94%",
+            ppimg: "../image/Dokter spesialis/dokter-penyakitdalam-2.png",
+            jadwal: [
+                ["Senin", "13.00-17.00"],
+                ["Selasa", "13.00-17.00"],
+                ["Rabu", "13.00-17.00"],
+                ["Kamis", "13.00-17.00"],
+                ["Jumat", "13.00-17.00"]
+            ]
+        },
+        {
+            nama: "dr. Siti Rahmawati, Sp.PD",
+            spesialisasi: "Spesialis Penyakit Dalam",
+            exp: "5 Tahun",
+            like: "88%",
+            ppimg: "../image/Dokter spesialis/dokter-penyakitdalam-3.png",
+            jadwal: [
+                ["Senin", "17.00-21.00"],
+                ["Selasa", "17.00-21.00"],
+                ["Rabu", "17.00-21.00"],
+                ["Kamis", "17.00-21.00"],
+                ["Jumat", "17.00-21.00"]
+            ]
+        }
     ],
     polimata: [
-        { nama: "dr. Adi Nugraha, Sp.M", spesialisasi: "Spesialis Mata", exp: "9 Tahun", like: "87%", ppimg: "../image/Dokter spesialis/dokter-mata-1.png" },
-        { nama: "dr. Maya Dewi, Sp.PA", spesialisasi: "Spesialis Patologi Anatomi", exp: "7 Tahun", like: "90%", ppimg: "../image/Dokter spesialis/dokter-mata-2.png" },
-        { nama: "dr. Iwan Setiawan, Sp.M", spesialisasi: "Spesialis Mata", exp: "15 Tahun", like: "98%", ppimg: "../image/Dokter spesialis/dokter-mata-3.png" },
+        {
+            nama: "dr. Adi Nugraha, Sp.M",
+            spesialisasi: "Spesialis Mata",
+            exp: "9 Tahun",
+            like: "87%",
+            ppimg: "../image/Dokter spesialis/dokter-mata-1.png",
+            jadwal: [
+                ["Senin", "08.00-12.00"],
+                ["Selasa", "08.00-12.00"],
+                ["Rabu", "08.00-12.00"],
+                ["Kamis", "08.00-12.00"],
+                ["Jumat", "08.00-12.00"]
+            ]
+        },
+        {
+            nama: "dr. Maya Dewi, Sp.PA",
+            spesialisasi: "Spesialis Patologi Anatomi",
+            exp: "7 Tahun",
+            like: "90%",
+            ppimg: "../image/Dokter spesialis/dokter-mata-2.png",
+            jadwal: [
+                ["Senin", "13.00-17.00"],
+                ["Selasa", "13.00-17.00"],
+                ["Rabu", "13.00-17.00"],
+                ["Kamis", "13.00-17.00"],
+                ["Jumat", "13.00-17.00"]
+            ]
+        },
+        {
+            nama: "dr. Iwan Setiawan, Sp.M",
+            spesialisasi: "Spesialis Mata",
+            exp: "15 Tahun",
+            like: "98%",
+            ppimg: "../image/Dokter spesialis/dokter-mata-3.png",
+            jadwal: [
+                ["Senin", "17.00-21.00"],
+                ["Selasa", "17.00-21.00"],
+                ["Rabu", "17.00-21.00"],
+                ["Kamis", "17.00-21.00"],
+                ["Jumat", "17.00-21.00"]
+            ]
+        }
     ],
     polijantung: [
-        { nama: "dr. Agus Santoso, Sp.JP", spesialisasi: "Spesialis Jantung dan Pembuluh Darah", exp: "22 Tahun", like: "94%", ppimg: "../image/Dokter spesialis/dokter-jantung-1.png" },
-        { nama: "dr. Indah Wulandari, Sp.JP", spesialisasi: "Spesialis Jantung dan Pembuluh Darah", exp: "13 Tahun", like: "95%", ppimg: "../image/Dokter spesialis/dokter-jantung-2.png" },
-        { nama: "dr. Yudi Pranata, Sp.BP", spesialisasi: "Spesialis Bedah Jantung dan Pembuluh Darah", exp: "18 Tahun", like: "98%", ppimg: "../image/Dokter spesialis/dokter-jantung-3.png" },
-    ],
+        {
+            nama: "dr. Agus Santoso, Sp.JP",
+            spesialisasi: "Spesialis Jantung dan Pembuluh Darah",
+            exp: "22 Tahun",
+            like: "94%",
+            ppimg: "../image/Dokter spesialis/dokter-jantung-1.png",
+            jadwal: [
+                ["Senin", "08.00-12.00"],
+                ["Selasa", "08.00-12.00"],
+                ["Rabu", "08.00-12.00"],
+                ["Kamis", "08.00-12.00"],
+                ["Jumat", "08.00-12.00"]
+            ]
+        },
+        {
+            nama: "dr. Indah Wulandari, Sp.JP",
+            spesialisasi: "Spesialis Jantung dan Pembuluh Darah",
+            exp: "13 Tahun",
+            like: "95%",
+            ppimg: "../image/Dokter spesialis/dokter-jantung-2.png",
+            jadwal: [
+                ["Senin", "13.00-17.00"],
+                ["Selasa", "13.00-17.00"],
+                ["Rabu", "13.00-17.00"],
+                ["Kamis", "13.00-17.00"],
+                ["Jumat", "13.00-17.00"]
+            ]
+        },
+        {
+            nama: "dr. Yudi Pranata, Sp.BP",
+            spesialisasi: "Spesialis Bedah Jantung dan Pembuluh Darah",
+            exp: "18 Tahun",
+            like: "98%",
+            ppimg: "../image/Dokter spesialis/dokter-jantung-3.png",
+            jadwal: [
+                ["Senin", "17.00-21.00"],
+                ["Selasa", "17.00-21.00"],
+                ["Rabu", "17.00-21.00"],
+                ["Kamis", "17.00-21.00"],
+                ["Jumat", "17.00-21.00"]
+            ]
+        }
+    ]
 };
+
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -66,10 +317,17 @@ function tampilkanDokter(poliId) {
                 </div>
                 <button onclick="tomboldokter('${dokter.nama}')">Pilih Dokter</button>
             </div>
-        `;
+            `;
+        var jadwalc = document.createElement("div");
+        jadwalc.className = "dokter-jadwal";
+        jadwalc.innerHTML = jadwalc.innerHTML + `<h3>Jadwal Praktek :</h3><br>`;
+        dokter.jadwal.forEach(function (i) {
+            jadwalc.innerHTML = jadwalc.innerHTML + `<p class="jadwal-text">${i}</p>`
+        });
+        dokterElement.appendChild(jadwalc);
         var allDokterContainer = document.getElementsByClassName("all-dokter-container")[0];
         allDokterContainer.appendChild(dokterElement);
-
+        
         var dokterselect = document.createElement("option");
         dokterselect.value = dokter.nama;
         dokterselect.textContent = dokter.nama;
@@ -78,6 +336,24 @@ function tampilkanDokter(poliId) {
     });
     
 }
+
+function inputjaddok(poli) {
+    console.log(poli)
+    var jadwali = document.getElementById("jadwal-input");
+    jadwali.innerHTML = "";
+    var doktername = document.getElementById("dokterinput").value;
+    poliData[poli].forEach(function(x){
+        if (x.nama==doktername) {
+            console.log(x.nama +" : "+x.jadwal)
+            x.jadwal.forEach(function(i){
+                jadwali.innerHTML = jadwali.innerHTML + `
+                <div><label>${i}</label><input type="radio" name="jadwal-input" value=${i}></div>`
+            });
+        }
+    });
+};
+
+
 
 function tomboldokter(nama){
     var selecteddokter = document.getElementById("dokterinput");
@@ -88,49 +364,63 @@ function tomboldokter(nama){
 
 document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault();
+    var jenisk = document.getElementById("jenis-kelamin")
 
-    var selectedDate = new Date(document.getElementById("tanggaldaftar").value);
-    var currentDate = new Date();
-
-    // Cek apakah tanggal yang dipilih lebih kecil dari tanggal saat ini (tanggal lalu)
-    if (selectedDate < currentDate) {
-        alert("Anda tidak dapat memilih tanggal yang sudah lewat.");
+  
+    if (jenisk.value === 'none') {
+        alert("Harap Pilih Jenis Kelamin");
         return;
     }
-
-    // Cek apakah tanggal yang dipilih adalah hari Minggu (dalam hal ini, kode 0 adalah hari Minggu)
-    if (selectedDate.getDay() === 0) {
-        alert("Anda tidak dapat memilih hari Minggu.");
-        return;
-    }
-
-    // Jika validasi berhasil, Anda dapat mengirimkan formulir atau melakukan tindakan lain sesuai kebutuhan.
-    alert("Tanggal valid!");
-    // this.submit(); // Uncomment this line to submit the form after validation
+    this.submit(); 
 });
+
+// document.getElementById("tanggalkunjungan").addEventListener('input', function(e){
+//   var day = new Date(this.value).getUTCDay();
+//   if([6,0].includes(day)){
+//     e.preventDefault();
+//     this.value = '';
+//     alert('Akhir pekan tidak diizinkan');
+//   }
+// });
+
+document.getElementById("jenis-kelamin").addEventListener("change", function () {
+    var jenk = document.getElementById("jenis-kelamin");
+    jenk.style.color = "black"
+});
+
+window.addEventListener("load",function(){
+    var jenk = document.getElementById("jenis-kelamin");
+    jenk.value = "none";
+})
 
 var poliTerpilih = getParameterByName('poli');
 if (poliTerpilih) {
-    console.log('Poli Terpilih:', poliTerpilih);
     const titletext = document.getElementById("titletext");
-    titletext.textContent = 'DOKTER'+poliTerpilih.replace('poli',' ').toUpperCase();
+    const formtitletext = document.getElementById("formtitletext");
+    titletext.textContent = 'DOKTER '+poliTerpilih.replace('poli','poli ').toUpperCase();
+    formtitletext.textContent = 'PENDAFTARAN '+poliTerpilih.replace('poli','poli ').toUpperCase();
     if (poliTerpilih=='polipdalam') {
         titletext.textContent = 'DOKTER PENYAKIT DALAM'
+        formtitletext.textContent = 'PENDAFTARAN POLI PENYAKIT DALAM'
     };
 
     var poliinput = document.getElementById("poliinput");
     poliinput.value = poliTerpilih.replace('poli',' ').toUpperCase();
     tampilkanDokter(poliTerpilih);
-
+    
     var formcont = document.getElementById("formct");
     formcont.style.display = "flex";
-    var inputTanggal = document.getElementById("tanggaldaftar");
-    var tanggalSaatIni = new Date();
-    var tahun = tanggalSaatIni.getFullYear();
-    var bulan = (tanggalSaatIni.getMonth() + 1).toString().padStart(2, '0');
-    var tanggal = tanggalSaatIni.getDate().toString().padStart(2, '0');
-
-    inputTanggal.value = tahun + "-" + bulan + "-" + tanggal;
+    
+    inputjaddok(poliTerpilih);
+    document.getElementById("dokterinput").addEventListener("change",function () {
+        inputjaddok(poliTerpilih)
+    });
+    // var inputTanggal = document.getElementById("tanggalkunjungan");
+    // var tanggalSaatIni = new Date();
+    // var tahun = tanggalSaatIni.getFullYear();
+    // var bulan = (tanggalSaatIni.getMonth() + 1).toString().padStart(2, '0');
+    // var tanggal = tanggalSaatIni.getDate().toString().padStart(2, '0');
+    // inputTanggal.setAttribute("min",tahun + "-" + bulan + "-" + tanggal);
 }
 else{
     var err = document.getElementById('maincontent');

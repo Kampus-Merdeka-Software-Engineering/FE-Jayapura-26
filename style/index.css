@@ -9,7 +9,9 @@ body{
 }
 main{
     margin: 20px;
-    margin-top: 66.58px;
+    margin-top: 11px;
+    display: flex;
+    flex-direction: column;
 }
 :root {
     --box-shadow:5px 5px 15px #c1c8d3,
@@ -35,7 +37,17 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    cursor: default;
+}
+
+.image{
+    filter: brightness(70%);
+}
+
+.image img{
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+    height: 400px;
 }
 .centered p {
     font-style: italic;
@@ -44,15 +56,9 @@ main{
 .centered h1{
     font-size: xx-large;
 }
-  .image{
-    filter: brightness(70%);
-}
-.container{
-    display: inline-flex;
-    justify-content: space-between;
-    cursor: default;
-}
+
 .item{
+    cursor: default;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -60,7 +66,8 @@ main{
     padding : 20px;
     border-radius: 10px;
     background-color: white;
-    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 .Text1{
     color: #224E75;
@@ -98,46 +105,38 @@ main{
 .title{
     cursor: default;
     text-align: center;
-    padding-top: 50px;
     font-weight: 700;
     font-size: x-large;
     color: #224E75;
+    margin : 40px 0;
 }
+
 .Berita{
-    margin-top: 40px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 .containerberita{
-    width: 98%;
-    /*background: red;*/
-    margin: auto;
-    display: flex;
-    align-items: center;
-    overflow-x: hidden;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
-.containerberita::-webkit-scrollbar{
-    display: none;
-}
-.containerberita .article-card{
-    min-width: 24%;
-    background: #224e75;
-    margin:  0 20px  0 0;
-    border-radius: 20px;
-    position: relative;
-    left: 0;
-    transition: 0.5s;
+    max-width: 1120px;
+    width: 100%;
+    padding: 30px 0;
 
 }
 
-.article-card .judul-berita{
+.slide-container{
+    margin: 0 30px ;
+    overflow: hidden;
+}
+
+.card{
+    background: #224E75;
+    border-radius: 8px;
+}
+.card-wrap{
+    height: 300px;
+    overflow: hidden;
+}
+.card .judul-berita{
     display: flex;
     align-items: center;
     text-align: center;
@@ -145,43 +144,36 @@ main{
     padding: 15px;
     font-size: 15px;
 }
-.article-card .judul-berita a{
+.card .judul-berita a{
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 } 
-.article-card .image-box {
+.card .image-box {
     height: 200px;
     text-align: center;
 }
-.article-card .image-box img {
+.card .image-box img {
     width: 100%;
     height: 100%;
     border-radius: 8px;
 }
-
-.nav-swip-button{
-    margin-top: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+.swiper-navBtn{
+    color: #224E75;
+    height: 45px;
+    width: 45px;
 }
-.nav-swip-button button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-    font-size: 50px;
-    width: 40%;
-    height: 50px;
+.pg-style{
+    padding: 2px 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255,255,255,1) 50%, rgba(255, 255, 255, 0) 100%);
 }
 
 .all-achievement-container{
     display: flex;
-    margin: 10px 5%;
-    gap: 40px;
-    justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
-
+    justify-content: space-around;
+    margin: 10px 10%;
+    gap: 10px;
 }
 
 .achievement-row{
@@ -217,58 +209,60 @@ main{
 }
 
 .Layanan{
-    margin-top: 40px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 }
-
 .containerlayanan{
-    margin-top: 20px;
-    width: 98%;
-    /*background: red;*/
-    margin: auto;
-    display: flex;
-    align-items: center;
-    overflow-x: hidden;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+    max-width: 1120px;
+    width: 100%;
+    padding: 30px 0;
+
 }
-.containerlayanan::-webkit-scrollbar{
+.card-layanan{
+    background: #224E75;
+    border-radius: 8px;
+}
+.card-layanan .judul-layanan{
+    display: flex;
     display: none;
-}
-.containerlayanan .layanan-card{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
     align-items: center;
-    min-width: 24%;
-    height: 420px;
-    background: #224e75;
-    margin:  0 20px  0 0;
-    border-radius: 20px;
-    position: relative;
-    left: 0;
-    transition: 0.5s;
+    text-align: center;
+    column-gap: 12px;
+    padding: 15px;
+    font-size: 15px;
 }
-.layanan-card img{
-    width: 50%;
+.card-layanan .judul-layanan p{
+    color: #ffffff;
+} 
+.card-layanan .image-box {
+    text-align: center;
+}
+.card-layanan .image-box img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+    border-radius: 8px;
+}
+.swiper-navBtn{
+    color: rgb(0, 195, 255);
+    height: 45px;
+    width: 45px;
+}
+.all-achievement-container{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10%;
+    gap: 10px;
 }
 
 .feedback-container{
-    margin: 50px 0;
     display: flex;
     width: 100%;
     justify-content: center;
 }
 #form-fdback{
+    width: 50%;
     border-radius: 20px;
     padding: 50px;
     background-color: white;
@@ -298,6 +292,11 @@ main{
     resize: none;
 }
 
+.submit-contain{
+    display: flex;
+    justify-content: center;
+}
+
 #subfeedb{
     background-color: #224e75;
     color: white;
@@ -306,6 +305,20 @@ main{
     height: 30px;
     width: 20%;
 }
+
+@media (max-width:900px) {
+    #form-fdback{
+        width: 70%;
+    }
+}
+@media (max-width:664px) {
+    #form-fdback{
+        width: 100%; 
+    }
+}
+
+
+
 /* footer */
 footer{
     text-align: center;
