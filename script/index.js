@@ -14,3 +14,16 @@ radioButtons.forEach((radioButton, index) => {
     }
   });
 });
+
+var layanant = document.getElementsByClassName("card-layanan");
+
+for (var i = 0; i < layanant.length; i++) {
+    layanant[i].addEventListener("click", function () {
+        var judulLayanan = this.querySelector(".judul-layanan");
+        if (judulLayanan.style.display === "none" || judulLayanan.style.display === "") {
+            judulLayanan.style.display = "block";
+        } else {
+            judulLayanan.style.display = "none";
+        }
+    });
+}

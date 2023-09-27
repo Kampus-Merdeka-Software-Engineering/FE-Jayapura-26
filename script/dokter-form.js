@@ -5,7 +5,7 @@ var poliData = {
             spesialisasi: "Dokter Umum",
             exp: "5 Tahun",
             like: "90%",
-            ppimg: "../image/Dokter Umum/16.png",
+            ppimg: "../image/Dokter Umum/dokter-umum-1.png",
             jadwal: [
                 ["Senin", "08.00-12.00"],
                 ["Selasa", "08.00-12.00"],
@@ -18,7 +18,7 @@ var poliData = {
             spesialisasi: "Dokter Umum",
             exp: "3 Tahun",
             like: "98%",
-            ppimg: "../image/Dokter Umum/25.png",
+            ppimg: "../image/Dokter Umum/dokter-umum-2.png",
             jadwal: [
                 ["Senin", "13.00-17.00"],
                 ["Selasa", "13.00-17.00"],
@@ -31,7 +31,7 @@ var poliData = {
             spesialisasi: "Dokter Umum",
             exp: "12 Tahun",
             like: "89%",
-            ppimg: "../image/Dokter Umum/18.png",
+            ppimg: "../image/Dokter Umum/dokter-umum-3.png",
             jadwal: [
                 ["Senin", "17.00-21.00"],
                 ["Selasa", "17.00-21.00"],
@@ -43,7 +43,7 @@ var poliData = {
             spesialisasi: "Dokter Umum",
             exp: "8 Tahun",
             like: "87%",
-            ppimg: "../image/Dokter Umum/19.png",
+            ppimg: "../image/Dokter Umum/dokter-umum-4.png",
             jadwal: [
                 ["Kamis", "08.00-12.00"],
                 ["Jumat", "08.00-12.00"]
@@ -54,7 +54,7 @@ var poliData = {
             spesialisasi: "Dokter Umum",
             exp: "10 Tahun",
             like: "89%",
-            ppimg: "../image/Dokter Umum/22.png",
+            ppimg: "../image/Dokter Umum/dokter-umum-5.png",
             jadwal: [
                 ["Kamis", "13.00-17.00"],
                 ["Jumat", "13.00-17.00"]
@@ -322,7 +322,7 @@ function tampilkanDokter(poliId) {
         jadwalc.className = "dokter-jadwal";
         jadwalc.innerHTML = jadwalc.innerHTML + `<h3>Jadwal Praktek :</h3><br>`;
         dokter.jadwal.forEach(function (i) {
-            jadwalc.innerHTML = jadwalc.innerHTML + `<p class="jadwal-text">${i}</p>`
+            jadwalc.innerHTML = jadwalc.innerHTML + `<p class="jadwal-text">${i[0]}, ${i[1]}</p>`
         });
         dokterElement.appendChild(jadwalc);
         var allDokterContainer = document.getElementsByClassName("all-dokter-container")[0];
@@ -337,6 +337,43 @@ function tampilkanDokter(poliId) {
     
 }
 
+function formatDate(date) {
+    const options = { year: 'numeric', month: 'long', day: '2-digit' };
+    return date.toLocaleDateString('id-ID', options);
+}
+
+function formatformDate(inputDate) {
+    const date = new Date(inputDate);
+    
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const year = date.getFullYear();
+
+    const formattedDate = `${year}-${month}-${day}`;
+    return formattedDate;
+}
+
+
+
+function getNextDayOfWeek(dayOfWeek) {
+    const daysOfWeek = ['minggu', 'senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu'];
+    const today = new Date();
+    const currentDayOfWeek = today.getDay();
+    const targetDayIndex = daysOfWeek.indexOf(dayOfWeek.toLowerCase());
+  
+    let daysUntilTargetDay = targetDayIndex - currentDayOfWeek;
+  
+    if (daysUntilTargetDay < 0) {
+      daysUntilTargetDay += 7;
+    } else if (daysUntilTargetDay === 0) {
+      return today;
+    }
+  
+    const nextDate = new Date(today);
+    nextDate.setDate(today.getDate() + daysUntilTargetDay);
+    return nextDate;
+  }
+
 function inputjaddok(poli) {
     console.log(poli)
     var jadwali = document.getElementById("jadwal-input");
@@ -345,15 +382,26 @@ function inputjaddok(poli) {
     poliData[poli].forEach(function(x){
         if (x.nama==doktername) {
             console.log(x.nama +" : "+x.jadwal)
+            var no=1;
             x.jadwal.forEach(function(i){
+                var idradio = `radjad${no}`
+                var datej = getNextDayOfWeek(i[0]);
+                var datex = formatDate(datej);
                 jadwali.innerHTML = jadwali.innerHTML + `
-                <div><label>${i}</label><input type="radio" name="jadwal-input" value=${i}></div>`
+                <div><label for="${idradio}">${i[0]}, ${i[1]},<br> ${datex}</label><input type="radio" id="${idradio}" name="jadwal-input" value=${i} onclick="getRadioValue('${datej}')"></div>`
+                no=no+1;
             });
         }
-    });
+    })
+    var inputpertama = document.getElementById("jadwal-input").children[0].children[1];
+    inputpertama.setAttribute("required",true)
+    ;
 };
 
-
+function getRadioValue(date){
+    var tglknj = document.getElementById("tgl-kunj");
+    tglknj.value = formatformDate(date)
+};
 
 function tomboldokter(nama){
     var selecteddokter = document.getElementById("dokterinput");
@@ -373,15 +421,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
     }
     this.submit(); 
 });
-
-// document.getElementById("tanggalkunjungan").addEventListener('input', function(e){
-//   var day = new Date(this.value).getUTCDay();
-//   if([6,0].includes(day)){
-//     e.preventDefault();
-//     this.value = '';
-//     alert('Akhir pekan tidak diizinkan');
-//   }
-// });
 
 document.getElementById("jenis-kelamin").addEventListener("change", function () {
     var jenk = document.getElementById("jenis-kelamin");
@@ -415,12 +454,12 @@ if (poliTerpilih) {
     document.getElementById("dokterinput").addEventListener("change",function () {
         inputjaddok(poliTerpilih)
     });
-    // var inputTanggal = document.getElementById("tanggalkunjungan");
-    // var tanggalSaatIni = new Date();
-    // var tahun = tanggalSaatIni.getFullYear();
-    // var bulan = (tanggalSaatIni.getMonth() + 1).toString().padStart(2, '0');
-    // var tanggal = tanggalSaatIni.getDate().toString().padStart(2, '0');
-    // inputTanggal.setAttribute("min",tahun + "-" + bulan + "-" + tanggal);
+    var inputTanggal = document.getElementById("tanggallahir");
+    var tanggalSaatIni = new Date();
+    var tahun = tanggalSaatIni.getFullYear();
+    var bulan = (tanggalSaatIni.getMonth() + 1).toString().padStart(2, '0');
+    var tanggal = tanggalSaatIni.getDate().toString().padStart(2, '0');
+    inputTanggal.setAttribute("max",tahun + "-" + bulan + "-" + tanggal);
 }
 else{
     var err = document.getElementById('maincontent');

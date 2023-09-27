@@ -63,7 +63,7 @@
         <!-- Artikel -->
         <div class="title">Berita Terbaru Tentang Kesehatan untuk Anda</div>
         <div class="Berita">
-            <div class="containerberita swiper">
+            <div class="swiper" id="containerberita">
                 <div class="slide-container">
                     <div class="card-wrapper swiper-wrapper">
                         <div class="card swiper-slide">
@@ -197,9 +197,9 @@
             </div>
         </div>
         <!-- Layanan -->
-        <div class="title">Janis Layanan SerenityMed Hospital untuk Anda</div>
+        <div class="title">Jenis Layanan SerenityMed Hospital untuk Anda</div>
         <div class="Layanan">
-            <div class="containerlayanan swiper">
+            <div class="swiper" id="containerlayanan">
                 <div class="slide-container">
                     <div class="card-wrapper swiper-wrapper">
                         <div class="card-layanan swiper-slide">
@@ -266,6 +266,8 @@
         <div class="title">Feedback Form</div>
         <div class="feedback-container">
             <form id="form-fdback">
+                <label for="namaFD">Nama :</label>
+                <input type="text" name="namaFD" id="namainfd">
                 <label for="rating">Seberapa puas anda dengan pelayanan kami:</label>
                 <div class="star-box">
                     <input type="radio" id="star-option1" name="star-option" value="star-option 1">
