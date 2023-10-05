@@ -674,7 +674,10 @@ section{
 }
 
 
-#arrow-img
+#arrow-img{
+    width: 30vw;
+    height: auto;
+}
 
 .feedback-container{
     display: flex;
