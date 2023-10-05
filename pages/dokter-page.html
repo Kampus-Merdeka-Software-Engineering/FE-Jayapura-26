@@ -42,8 +42,8 @@
                 <label for="email-pel">Email:</label>
                 <input type="email" name="email-pel" id="emailp" placeholder="-----Contoh: abcdxxxx@gmail.com-----" required>
 
-                <label for="gambar">Foto KTP:</label>
-                <input type="file" name="gambar" id="gambar-ktp" accept="image/*" required>
+                <label for="nik">NIK:</label>
+                <input type="text" name="nikpasien" id="nik" pattern="[0-9]{16}" placeholder="-----Contoh: 3313091706330001-----" required>
                 
                 <label for="status-pasien">Status Pasien :</label>
                 <div class="sts-radio">
@@ -57,20 +57,16 @@
                     </div>
                 </div>
 
-                <label for="poli">Poli:</label>
+                <label for="poliinput">Poli:</label>
                 <input type="text" id="poliinput" name="poli" value="Poli Anda" readonly>
                 <br>
 
-                <label for="dokter">Dokter:</label>
+                <label for="dokterinput">Dokter:</label>
                 <select id="dokterinput" name="dokter">
                     <option value="none" selected disabled>-----Pilih Dokter-----</option>
                 </select>
                 <br>
 
-                <!-- <label for="tanggal-kunjungan">Tanggal kunjungan:</label>
-                <input type="date" id="tanggalkunjungan" name="tanggal-kunjungan" required>
-                <br> -->
-                
                 <label for="jadwal-input" id="jadkunj-lab">Pilih Jadwal Kunjungan :</label>
                 <div id="jadwal-input" class="jadwal-inputdok"></div>
 
