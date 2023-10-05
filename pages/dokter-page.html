@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/dokter-page.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/dokter-page.css">
+    <title>Pendaftaran Poli</title>
 </head>
 
 <body>
@@ -39,6 +39,9 @@
                 <label for="nomor-hp">Nomor HP:</label>
                 <input type="tel" id="nomor-hp" name="nomor-hp" pattern="[0-9]{10,15}" placeholder="-----Contoh: 081234567890-----" required>
                 
+                <label for="email-pel">Email:</label>
+                <input type="email" name="email-pel" id="emailp" placeholder="-----Contoh: abcdxxxx@gmail.com-----" required>
+
                 <label for="gambar">Foto KTP:</label>
                 <input type="file" name="gambar" id="gambar-ktp" accept="image/*" required>
                 
@@ -59,7 +62,9 @@
                 <br>
 
                 <label for="dokter">Dokter:</label>
-                <select id="dokterinput" name="dokter"></select>
+                <select id="dokterinput" name="dokter">
+                    <option value="none" selected disabled>-----Pilih Dokter-----</option>
+                </select>
                 <br>
 
                 <!-- <label for="tanggal-kunjungan">Tanggal kunjungan:</label>
@@ -81,8 +86,8 @@
     <footer>
         <p>© 2023 SerenityMed Hospital. All rights reserved</p>
     </footer>
-    <script src="../script/header.js"></script>
-    <script src="../script/dokter-form.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/dokter-form.js"></script>
 </body>
 
 </html>
