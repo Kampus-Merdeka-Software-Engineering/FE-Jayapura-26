@@ -204,32 +204,8 @@
                 <!-- Slider main container -->
                 <div class="swiper-headline-news-container swiper">
                     <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper slide-headline-container">
+                    <div id="headingnews-slider" class="swiper-wrapper slide-headline-container">
                       <!-- Slides -->
-                      <div class="swiper-slide slide-headline-container-add">
-                        <div class="grid-news-container">
-                            <a class="mainHeading">Headline News</a>
-                            <a class="top-heading">top1</a>
-                            <a class="top-heading2">top2</a>  
-                            <a class="secondary-heading">Secondary Headline</a>
-                        </div>
-                      </div>
-                      <div class="swiper-slide slide-headline-container">
-                        <div class="grid-news-container">
-                            <a class="mainHeading">Headline News</a>
-                            <a class="top-heading">top1</a>
-                            <a class="top-heading2">top2</a>  
-                            <a class="secondary-heading">Secondary Headline</a>
-                        </div>
-                      </div>
-                      <div class="swiper-slide slide-headline-container">
-                        <div class="grid-news-container">
-                            <a class="mainHeading">Headline News</a>
-                            <a class="top-heading">top1</a>
-                            <a class="top-heading2">top2</a>  
-                            <a class="secondary-heading">Secondary Headline</a>
-                        </div>
-                      </div>
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination headline-pagination"></div>                    
@@ -240,17 +216,8 @@
                 <!-- Slider main container -->
                 <div class="swiper-general-news-container swiper">
                     <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
+                    <div id="general-news-container" class="swiper-wrapper">
                       <!-- Slides -->
-                      <div class="swiper-slide general-news-slide">News 1</div>
-                      <div class="swiper-slide general-news-slide">News 2</div>
-                      <div class="swiper-slide general-news-slide">News 3</div>
-                      <div class="swiper-slide general-news-slide">News 4</div>
-                      <div class="swiper-slide general-news-slide">News 5</div>
-                      <div class="swiper-slide general-news-slide">News 6</div>
-                      <div class="swiper-slide general-news-slide">News 7</div>
-                      <div class="swiper-slide general-news-slide">News 8</div>
-                      <div class="swiper-slide general-news-slide">News 9</div>
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
@@ -349,9 +316,14 @@
     <section id="home-sect-contact-us">
         <h1>Contact Us</h1>
         <div class="contact-container">
-            <p>Email : serenitymedhospital@gmail.com</p>
-            <p>No.Telp : 087865516046</p>
-            <p>Alamat : Jl. Jend. Sudirman kav 52-53, Senayan, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12190</p>
+            <div class="footer-logo-container">
+                <img src="./image/umum/logo.png" alt="serenitymed">
+            </div>
+            <div class="footer-contact-container">
+                <p>Email : serenitymedhospital@gmail.com</p>
+                <p>No.Telp : 087865516046</p>
+                <p>Alamat : Jl. Jend. Sudirman kav 52-53, Senayan, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12190</p>
+            </div>
         </div>
     </section>
 
@@ -359,6 +331,7 @@
         <p>© 2023 SerenityMed Hospital. All rights reserved</p>
     </footer>
     <script src="./js/header.js"></script>
+    <script src="./js/newsindex.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/swiperindex2.js"></script>
     <script src="./js/index2.js"></script>

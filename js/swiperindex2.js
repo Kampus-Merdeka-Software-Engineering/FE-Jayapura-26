@@ -62,7 +62,7 @@ var swiperGeneralNews = new Swiper(".swiper-general-news-container", {
     prevEl: ".swiper-button-prev",
   },
   autoplay:{
-    delay:2000,
+    delay:3000,
     disableOnInteraction:false,
     pauseOnMouseEnter:true
   }
