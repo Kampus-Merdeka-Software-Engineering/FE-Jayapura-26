@@ -642,13 +642,37 @@ section {
 .good-review {
     border: 3px solid #ffffff;
     width: 25%;
-    height: 200px;
+    height: 250px;
     border-radius: 20px;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.good-review-starbox{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.good-review-starbox img{
+    width: 20%;
+}
+
+.good-review h3{
+    word-break: keep-all;
+}
+
+.good-review p {
+    height: 100px;
+    overflow: auto;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid black;
 }
 
 #more-good-review-button {
@@ -711,8 +735,7 @@ section {
 }
 
 .bad-review {
-    width: 20%;
-    height: 200px;
+    width: 25%;
     border: 3px solid hsl(0, 0%, 100%);
     border-radius: 10px;
     background-color: white;
@@ -720,6 +743,30 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.bad-review-starbox{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.bad-review-starbox img{
+    width: 20%;
+}
+
+.bad-review h3{
+    word-break: keep-all;
+}
+
+.bad-review p {
+    height: 100px;
+    overflow: auto;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid black;
 }
 
 .review-form-container {

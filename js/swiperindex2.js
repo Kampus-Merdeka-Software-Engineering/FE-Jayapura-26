@@ -5,6 +5,7 @@ var swiperHead = new Swiper(".swiper-headline-news-container", {
   centerSlide: "true",
   grabCursor: "true",
   fade:"true",
+  speed:2000,
   // breakpoints: {
   //   480: {
   //     slidesPerView: 2,
@@ -27,8 +28,9 @@ var swiperHead = new Swiper(".swiper-headline-news-container", {
   },
   autoplay:{
     delay:6000,
-    disableOnInteraction:true,
-  }
+    disableOnInteraction:false,
+  },
+  loop:true
 });
 var swiperGeneralNews = new Swiper(".swiper-general-news-container", {
   slidesPerView: 3,
@@ -37,6 +39,7 @@ var swiperGeneralNews = new Swiper(".swiper-general-news-container", {
   centerSlide: "true",
   grabCursor: "true",
   fade:"true",
+  speed:1000,
   // breakpoints: {
   //   480: {
   //     slidesPerView: 2,
@@ -65,5 +68,6 @@ var swiperGeneralNews = new Swiper(".swiper-general-news-container", {
     delay:3000,
     disableOnInteraction:false,
     pauseOnMouseEnter:true
-  }
+  },
+  loop:true
 });
