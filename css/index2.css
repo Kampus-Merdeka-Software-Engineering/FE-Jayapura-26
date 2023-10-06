@@ -655,12 +655,12 @@ section {
 
 .good-review-starbox{
     width: 100%;
-    gap: 10px;
+    gap: 1%;
     display: flex;
     flex-direction: row;
 }
 .good-review-starbox img{
-    width: 20%;
+    width: 19%;
 }
 
 .good-review h3{
@@ -749,12 +749,13 @@ section {
 
 .bad-review-starbox{
     width: 100%;
-    gap: 10px;
+    gap: 1%;
     display: flex;
+    justify-content: center;
     flex-direction: row;
 }
 .bad-review-starbox img{
-    width: 20%;
+    width: 19%;
 }
 
 .bad-review h3{
