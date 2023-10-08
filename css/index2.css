@@ -13,7 +13,7 @@ a{
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 body {
@@ -32,13 +32,14 @@ body {
 
 section {
     width: 100%;
-    height: 850px;
+    overflow-x: hidden;
     display: flex;
 }
 
 /* home landing */
 
 #home-sect-landing {
+    height: 850px;
     background-image: url(../image/umum/bannerUtama.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -53,24 +54,24 @@ section {
     flex-direction: column;
     justify-content: center;
     padding-left: 80px;
-    width: 800px;
+    width: 55%;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     gap: 70px;
 }
 
 .title-text-container h1 {
     color: #9dc3e6;
-    font-size: 70px;
+    font-size: 4.5vw;
 }
 
 .title-text-container h2 {
     color: #ffffff;
-    font-size: 35px;
+    font-size: 2.3vw;
 }
 
 .title-text-container h3 {
     color: #ffffff;
-    font-size: 25px;
+    font-size: 1.8vw;
 }
 
 #home-more-button {
@@ -124,11 +125,12 @@ section {
 .title-profiles h1 {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 60px;
+    font-size: 5vw;
     margin-bottom: 20px;
 }
 
 .title-profiles h3 {
+    font-size: 1.2vw;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -141,14 +143,14 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 70px 10px 70px;
+    padding: 0 3.5vw 10px 3.5vw;
 }
 
 .kom-sperator {
     gap: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .kom-contain {
@@ -158,7 +160,6 @@ section {
     padding: 20px;
     word-wrap: break-word;
     width: 50%;
-    height: 100%;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -166,6 +167,12 @@ section {
     width: 80px;
     margin-right: 20px;
     object-fit: contain;
+}
+.kom-label{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:  baseline;
 }
 
 #separator-profile-page {
@@ -189,18 +196,20 @@ section {
 
 .wrapper-penghargaan {
     width: 100%;
-    padding: 0 110px 0 110px;
+    padding: 0 5.5vw;
     display: flex;
     justify-content: space-around;
 }
 
 .highlight-contain {
     height: 358px;
+    width: 500px;
 }
 
 #highlighted-image {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    width: 500px;
+    width: 100%;
+    object-fit: contain;
     border: 4px solid #a5bdd2;
 }
 
@@ -215,11 +224,12 @@ section {
 .title-penghargaan h1 {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 50px;
+    font-size: 3.5vw;
     margin-bottom: 20px;
 }
 
 .title-penghargaan h3 {
+    font-size: 1.2vw;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: left;
@@ -230,6 +240,7 @@ section {
     padding: 20px;
     background-color: #a5bdd2;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     gap: 70px;
@@ -407,7 +418,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 0 100px;
+    padding: 0 5.5vw;
 }
 
 .layanan-content {
@@ -455,7 +466,7 @@ section {
 
 #bot-news-separator {
     background: rgb(157, 195, 230);
-    background: linear-gradient(180deg, rgba(157, 195, 230, 0) 0%, rgba(157, 195, 230, 1) 98%);
+    background: linear-gradient(180deg, rgba(168,168,168,0) 0%, rgba(168,168,168,1) 100%);
     width: 100%;
     height: 100px;
 }
@@ -516,10 +527,10 @@ section {
 }
 
 .mainHeading h1 {
-    font-size: 30px;
+    font-size: 2.5vw;
 }
 .mainHeading h3 {
-    font-size: 20px;
+    font-size: 1.8vw;
 }
 
 .top-heading {
@@ -529,7 +540,7 @@ section {
     grid-area: 1 / 4 / 2 / 5;
 }
 .top-heading h1,.top-heading2 h1{
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 .top-heading h3,.top-heading2 h3{
     font-size: 10px;
@@ -541,10 +552,10 @@ section {
     flex-direction: column;
 }
 .secondary-heading h1 {
-    font-size: 25px;
+    font-size: 1.8vw;
 }
 .secondary-heading h3 {
-    font-size: 15px;
+    font-size: 1.3vw;
 }
 
 /* news-general */
@@ -574,7 +585,7 @@ section {
 
 .general-news-slide img{
     object-fit: cover;
-    width: 200px;
+    width: 40%;
     height: 100%;
 }
 
@@ -593,7 +604,7 @@ section {
 
 .general-news-judl{
     color: #000000;
-    font-size: 1.2vw;
+    font-size: 15px;
 }
 
 .general-news-tombol{
@@ -602,15 +613,15 @@ section {
     width: 50%;
     border-radius: 10px;
     text-align: center;
-    font-size: 1.2vw;
+    font-size: 15px;
     min-width: 71px;
 }
 
 /* feedback */
 #home-sect-feedback {
-    background-color: #9dc3e6;
+    background-color: #a8a8a8;
     height: auto;
-    padding: 100px 100px 20px 100px;
+    padding: 100px 5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -632,16 +643,22 @@ section {
     gap: 40px;
 }
 
+#hidemorebutton{
+    position: sticky;
+    top: 0;
+}
+
 .good-review-container {
     width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .good-review {
     border: 3px solid #ffffff;
-    width: 25%;
+    width: 330px;
+    margin: 10px;
     height: 250px;
     border-radius: 20px;
     background-color: white;
@@ -655,16 +672,21 @@ section {
 
 .good-review-starbox{
     width: 100%;
-    gap: 1%;
+    gap: 1.5%;
     display: flex;
+    justify-content: center;
     flex-direction: row;
 }
 .good-review-starbox img{
-    width: 19%;
+    width: 15%;
 }
 
 .good-review h3{
-    word-break: keep-all;
+    text-align: center;
+}
+
+.good-review h4{
+    font-size: 10px;
 }
 
 .good-review p {
@@ -673,9 +695,18 @@ section {
     border-radius: 5px;
     padding: 5px 10px;
     border: 1px solid black;
+    width: 90%;
 }
 
-#more-good-review-button {
+
+.button-container{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.button-container button {
     padding: 10px 30px;
     border: none;
     background-color: #ffffff;
@@ -684,9 +715,13 @@ section {
     cursor: pointer;
 }
 
-#more-good-review-button:hover {
+.button-container button:hover {
     background-color: #8b8b8b;
     padding: 10px 30px;
+}
+
+#hidemorebutton{
+    display: none;
 }
 
 #divider {
@@ -729,13 +764,16 @@ section {
 .bad-review-container {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     align-items: center;
 }
 
 .bad-review {
-    width: 25%;
+    width: 280px;
+    height: 288.5px;
+    margin: 10px;
     border: 3px solid hsl(0, 0%, 100%);
     border-radius: 10px;
     background-color: white;
@@ -749,21 +787,25 @@ section {
 
 .bad-review-starbox{
     width: 100%;
-    gap: 1%;
+    gap: 1.5%;
     display: flex;
     justify-content: center;
-    flex-direction: row;
 }
 .bad-review-starbox img{
-    width: 19%;
+    width: 15%;
 }
 
 .bad-review h3{
-    word-break: keep-all;
+    text-align: center;
+}
+.bad-review h4{
+    font-size: 10px;
 }
 
 .bad-review p {
+    width: 100%;
     height: 100px;
+    word-wrap: break-word;
     overflow: auto;
     border-radius: 5px;
     padding: 5px 10px;
@@ -842,6 +884,7 @@ section {
 }
 
 .star-box {
+    margin-top: 5px;
     display: flex;
 }
 
@@ -900,13 +943,56 @@ section {
     background-color: #3e6486;
 }
 
+#subloading{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #8b8b8b70;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#submit-success,#submit-failed{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #8b8b8b70;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit-success div,#submit-failed div{
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+#subsucbutton,#subfailbutton{
+    padding: 10px 20px;
+}
+
 /* contact us */
 #home-sect-contact-us {
     display: flex;
     flex-direction: column;
     gap: 40px;
     height: 300px;
-    background-color: #5386b4;
+    background: linear-gradient(90deg, rgba(12,79,140,1) 0%, rgba(83,134,180,1) 53%, rgba(110,215,255,1) 100%);
     padding: 50px 100px;
     color: white;
 }
@@ -944,4 +1030,266 @@ footer {
     padding: 20px;
     cursor: default;
     background-color: #ffffff;
+}
+
+
+/*responsive breakoints*/
+@media (max-width: 850px) {
+    .title-text-container{
+        width: 80%;
+    }
+
+    .title-text-container h1{
+        font-size: 50px;
+    }
+
+    .title-text-container h2{
+        font-size: 30px;
+    }
+
+    .title-text-container h3{
+        font-size: 20px;
+    }
+
+    .title-profiles h1{
+        font-size: 50px;
+    }
+
+    .title-profiles h3{
+        font-size: 17px;
+    }
+
+    .title-penghargaan h1{
+        font-size: 30px;
+    }
+
+    .title-penghargaan h3{
+        font-size: 15px;
+    }
+    .regist-title h1{
+        font-size: 35px;
+    }
+
+    .regist-container p{
+        font-size: 24px;
+    }
+
+    .highlight-contain{
+        height: auto;
+        width: 350px;
+    }
+
+    .slide-headline-container{
+        height: 600px;
+    }
+
+    .news-heading{
+        margin: 10px 0;
+    }
+
+    .grid-news-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        }
+        
+    .mainHeading { grid-area: 1 / 1 / 3 / 3;}
+    .mainHeading h1{
+        font-size: 30px;
+    }
+    .mainHeading h3{
+        font-size: 15px;
+    }
+
+    .top-heading { grid-area: 3 / 1 / 4 / 2; }
+    .top-heading2 { grid-area: 3 / 2 / 4 / 3; }
+
+    .top-heading h1, .top-heading2 h1{
+        font-size: 18px;
+    }
+
+    .top-heading h3, .top-heading2 h3{
+        font-size: 10px;
+    }
+
+    .secondary-heading { grid-area: 4 / 1 / 5 / 3; }
+    .secondary-heading h1{
+        font-size: 22px;
+    }
+    .secondary-heading h3{
+        font-size: 15px;
+    }
+
+    .main-title-feedback h1{
+        font-size: 40px;
+    }
+
+    #home-sect-contact-us{
+        padding: 20px 20px;
+        gap: 10px;
+        justify-content: center;
+    }
+    .contact-container{
+        flex-direction: column;
+    }
+    .footer-contact-container p{
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 740px) {
+    .title-profiles h1{
+        font-size: 37px;
+        padding: 0 10px;
+        text-align: center;
+    }
+    .highlight-contain{
+        display: none;
+    }
+    .title-penghargaan{
+        width: 80%;
+    }
+    .title-penghargaan h1{
+        font-size: 35px;
+        text-align: center;
+    }
+    .title-penghargaan h3{
+        font-size: 15px;
+        text-align: center;
+    }
+    .kutipan-donc{
+        width: 90%;
+    }
+    
+    .kom-sperator{
+        flex-direction: column;
+        align-items: center;
+    }
+    .kom-contain{
+        width: 100%;
+    }
+
+    .title-news h1{
+        font-size: 40px;
+    }
+    
+    .general-news-title h3{
+        font-size: 15px;
+    }
+    .general-news-judl{
+        font-size: 20px;
+    }
+    .main-title-feedback h1{
+        font-size: 30px;
+    }
+
+    .review-form-container{
+        flex-direction: column;
+    }
+
+    .bad-review-title{
+        width: 100%;
+    }
+
+    #arrow-img{
+        display: none;
+    }
+
+    #form-fdback{
+        width: 80%;
+        padding: 20px;
+    }
+
+    .star-box label img{
+        width: 100%;
+    }
+
+    .general-news-judl{
+        font-size: 15px;
+    }
+
+    .footer-logo-container{
+        width: 60%;
+        padding: 10px;
+    }
+}
+@media (max-width: 500px) {
+    #home-sect-landing{
+        height: 400px;
+        align-items: center;
+    }
+    .title-text-container{
+        padding: 0;
+    }
+    .title-text-container h1{
+        font-size: 38px;
+    }
+    .title-text-container h2{
+        font-size: 20px;
+    }
+    .title-text-container h3{
+        font-size: 13px;
+    }
+    #home-more-button{
+        display: none;
+    }
+
+    .regist-title h1{
+        font-size: 30px;
+    }
+
+    .regist-container p{
+        font-size: 15px;
+    }
+
+    .regist-container a{
+        font-size: 18px;
+    }
+
+    .kutipan-donc h3{
+        font-size: 14px;
+    }
+
+    .kutipan-donc p{
+        font-size: 15px;
+    }
+
+    .title-news{
+        margin: 0;
+    }
+
+    .title-news h1{
+        font-size: 30px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .general-news-judl{
+        font-size: 13px;
+    }
+    .grid-news-container{
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .layanan-content img{
+        width: 85px;
+    }
+
+    .title-main-layanan{
+        padding: 20px 30px;
+    }
+    .title-main-layanan h1{
+        font-size: 35px;
+    }
+    #playanan{
+        font-size: 15px;
+    }
+
+    .layanan-title p{
+        font-size: 12px;
+    }
+    .footer-contact-container p{
+        font-size: 13px;
+    }
 }

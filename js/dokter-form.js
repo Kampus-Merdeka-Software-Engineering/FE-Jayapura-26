@@ -320,12 +320,10 @@ function tampilkanDokter(poliId) {
             `;
         var jadwalc = document.createElement("div");
         jadwalc.className = "dokter-jadwal";
-        jadwalc.innerHTML = jadwalc.innerHTML + `<h3>Jadwal Praktek :</h3><br>`;
-        jadwalc.innerHTML = jadwalc.innerHTML + `<p class="jadwal-text">`;
+        jadwalc.innerHTML = jadwalc.innerHTML + `<h3>Jadwal Praktek :</h3>`;
         dokter.jadwal.forEach(function (i) {
-            jadwalc.innerHTML = jadwalc.innerHTML + `${i[0]}, ${i[1]}<br>`
+            jadwalc.innerHTML = jadwalc.innerHTML + `<p>${i[0]}, ${i[1]}</p>`
         });
-        jadwalc.innerHTML = jadwalc.innerHTML + `</p>`;
         dokterElement.appendChild(jadwalc);
         var allDokterContainer = document.getElementsByClassName("all-dokter-container")[0];
         allDokterContainer.appendChild(dokterElement);
@@ -393,7 +391,7 @@ function inputjaddok(poli) {
                 var datej = getNextDayOfWeek(i[0]);
                 var datex = formatDate(datej);
                 jadwali.innerHTML = jadwali.innerHTML + `
-                <div><label for="${idradio}">${i[0]}, ${i[1]},<br> ${datex}</label><input type="radio" id="${idradio}" name="jadwal-input" value=${i} onclick="getRadioValue('${datej}')"></div>`
+                <div><label for="${idradio}">${i[0]}, ${i[1]},<br> ${datex}</label><input type="radio" id="${idradio}" name="jadwal-input" value="${i} ,${datex}"></div>`
                 no=no+1;
             });
         }
@@ -404,36 +402,12 @@ function inputjaddok(poli) {
     }
 };
 
-function getRadioValue(date){
-    var tglknj = document.getElementById("tgl-kunj");
-    tglknj.value = formatformDate(date)
-};
-
 function tomboldokter(nama){
     var selecteddokter = document.getElementById("dokterinput");
     selecteddokter.value = nama 
     var form = document.getElementById("formdt");
     form.scrollIntoView();
 }
-
-document.querySelector("form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    var jenisk = document.getElementById("jenis-kelamin")
-    var dokinp = document.getElementById("dokterinput")
-    if (jenisk.value === 'none' && dokinp.value === 'none') {
-        alert("Harap Pilih Jenis Kelamin Dan Dokter");
-        return;
-    }
-    else if (jenisk.value === 'none') {
-        alert("Harap Pilih Jenis Kelamin");
-        return;
-    }
-    else if (dokinp.value === 'none') {
-        alert("Harap Pilih Dokter");
-        return;
-    }
-    this.submit(); 
-});
 
 document.getElementById("jenis-kelamin").addEventListener("change", function () {
     var jenk = document.getElementById("jenis-kelamin");
@@ -483,13 +457,100 @@ if (poliTerpilih) {
     document.querySelectorAll(".tomb-doktr").forEach(function (e) {
         e.addEventListener("click", handleClick);       
     });
-
+    
     var inputTanggal = document.getElementById("tanggallahir");
     var tanggalSaatIni = new Date();
     var tahun = tanggalSaatIni.getFullYear();
     var bulan = (tanggalSaatIni.getMonth() + 1).toString().padStart(2, '0');
     var tanggal = tanggalSaatIni.getDate().toString().padStart(2, '0');
     inputTanggal.setAttribute("max",tahun + "-" + bulan + "-" + tanggal);
+
+    document.getElementById('formdt').addEventListener('submit',function(event) {
+        console.log("fungsi submit berjalan");
+        event.preventDefault();
+        var jenisk = document.getElementById("jenis-kelamin")
+        var dokinp = document.getElementById("dokterinput")
+        if (jenisk.value === 'none' && dokinp.value === 'none') {
+            alert("Harap Pilih Jenis Kelamin Dan Dokter");
+            return;
+        }
+        else if (jenisk.value === 'none') {
+            alert("Harap Pilih Jenis Kelamin");
+            return;
+        }
+        else if (dokinp.value === 'none') {
+            alert("Harap Pilih Dokter");
+            return;
+        }
+    
+        const nama = document.getElementById('namalengkap').value;
+        const tanggalLahir = document.getElementById('tanggallahir').value;
+        const jenisKelamin = document.getElementById('jenis-kelamin').value;
+        const nomorHP = document.getElementById('nomor-hp').value;
+        const email = document.getElementById('emailp').value;
+        const nik = document.getElementById('nik').value;
+        const statusPasien = document.querySelector('input[name="status-pasien"]:checked').value;
+        const poli = document.getElementById('poliinput').value;
+        const dokter = document.getElementById('dokterinput').value;
+    
+        var penilaian = document.querySelector('input[name="jadwal-input"]:checked').value;
+        var parts = penilaian.split(',');
+        var tanggal = parts[2].trim();
+        var tanggalArray = tanggal.split(' ');
+        var bulanMap = {
+            'Januari': '01',
+            'Februari': '02',
+            'Maret': '03',
+            'April': '04',
+            'Mei': '05',
+            'Juni': '06',
+            'Juli': '07',
+            'Agustus': '08',
+            'September': '09',
+            'Oktober': '10',
+            'November': '11',
+            'Desember': '12'
+        };
+        var formattedTanggal = tanggalArray[2] + '-' + bulanMap[tanggalArray[1]] + '-' + tanggalArray[0];
+        var jamString = parts[1].trim();
+        var jamArray = jamString.split('-');
+        var jamAwal = jamArray[0].trim();
+        var formattedJamAwal = jamAwal.replace('.', ':') + ':00';
+        var formattedDateTime = formattedTanggal + 'T' + formattedJamAwal;
+
+        const formData = {
+            "nama_lengkap":nama,
+            "tanggal_lahir": tanggalLahir,
+            "jenis_kelamin": jenisKelamin,
+            "nomor_hp": nomorHP,
+            "email":email,
+            "nik":nik,
+            "status_pasien": statusPasien,
+            "poli":poli,
+            "dokter":dokter,
+            "jadwal_dokter":formattedDateTime
+        };
+        var loading = document.getElementById("subloading");
+        loading.style.display = "flex";
+        fetch('https://be-jayapura-26-production.up.railway.app/poli', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Data berhasil dikirim:', data);
+            loading.style.display = "none";
+            document.getElementById("submit-success").style.display = "flex";
+        })
+        .catch(error => {
+            console.error('Terjadi kesalahan:', error);
+            loading.style.display = "none";
+            document.getElementById("submit-failed").style.display = "flex";
+        });
+    });
 }
 else{
     var err = document.getElementById('maincontent');
@@ -497,4 +558,13 @@ else{
 
     var page = document.getElementById('errorpage');
     page.style.display = 'flex';
+}
+
+function subsucok() {
+    document.getElementById("submit-success").style.display = "none";
+    location.reload();
+}
+
+function subfailok() {
+    document.getElementById("submit-failed").style.display = "none";
 }

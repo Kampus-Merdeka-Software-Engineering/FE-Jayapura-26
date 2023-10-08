@@ -20,12 +20,12 @@
         <div class="all-dokter-container"></div>
         <h1 class="title" id="formtitletext">PENDAFTARAN RAWAT JALAN</h1>
         <div id="formct" class="form-container">
-            <form id="formdt" class="formdokter" action="" method="post">
-                <label for="nama">Nama Lengkap:</label>
+            <form id="formdt" class="formdokter">
+                <label for="namalengkap">Nama Lengkap:</label>
                 <input type="text" id="namalengkap" name="nama" placeholder="Nama Lengkap Sesuai KTP" required>
                 <br>
         
-                <label for="tanggal-lahir">Tanggal lahir:</label>
+                <label for="tanggallahir">Tanggal lahir:</label>
                 <input type="date" id="tanggallahir" name="tanggal-lahir" required>
                 <br>
                 
@@ -45,7 +45,7 @@
                 <label for="nik">NIK:</label>
                 <input type="text" name="nikpasien" id="nik" pattern="[0-9]{16}" placeholder="-----Contoh: 3313091706330001-----" required>
                 
-                <label for="status-pasien">Status Pasien :</label>
+                <label>Status Pasien :</label>
                 <div class="sts-radio">
                     <div>
                         <input type="radio" id="baru" name="status-pasien" value="Baru" required>
@@ -69,13 +69,29 @@
 
                 <label for="jadwal-input" id="jadkunj-lab">Pilih Jadwal Kunjungan :</label>
                 <div id="jadwal-input" class="jadwal-inputdok"></div>
-
-                <input type="date" name="tanggal-kunjungan" id="tgl-kunj" hidden>
-
+                
                 <div class="sub-container">
                 <input type="submit" id="subbutton" value="Kirim">
                 </div>
             </form>
+        </div>
+        <div id="subloading">Mengirim Feedback....</div>
+        <div id="submit-success">
+            <div class="submessage">
+                <h1>Submit Berhasil</h1>
+                <div style="display:flex;flex-direction:column">
+                <p>terima kasih sudah Mendaftar</p>
+                <p>silahkan cek email anda</p>
+                </div>
+                <button id="subsucbutton" onclick="subsucok()">ok</button>
+            </div>
+        </div>
+        <div id="submit-failed">
+            <div class="submessage">
+                <h1>Submit Gagal</h1>
+                <p>Tampaknya ada kesalahan server</p>
+                <button id="subfailbutton" onclick="subfailok()">ok</button>
+            </div>
         </div>
     </main>
 

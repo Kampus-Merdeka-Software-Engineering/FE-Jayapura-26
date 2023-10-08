@@ -6,11 +6,11 @@
     padding: 10px 3vw;
     position: fixed;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.825);
+    background-color: rgb(255, 255, 255);
     border-bottom: 2px solid #9dc3e6;
     transition: transform ease-in-out 0.7s;
     z-index: 200;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -109,6 +109,14 @@
     }
     #navres-button{
         display: block;
+    }
+}
+@media (max-width:374px){
+    #mainHeader img{
+        width: 250px;
+    }
+    #navres-button img {
+        width: 40px;
     }
 }
 

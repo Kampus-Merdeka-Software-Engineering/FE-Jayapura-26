@@ -6,22 +6,6 @@ var swiperHead = new Swiper(".swiper-headline-news-container", {
   grabCursor: "true",
   fade:"true",
   speed:2000,
-  // breakpoints: {
-  //   480: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20
-  //   },
-
-  //   720: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 30
-  //   },
-
-  //   900: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 40
-  //   }
-  // },
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,
@@ -33,29 +17,23 @@ var swiperHead = new Swiper(".swiper-headline-news-container", {
   loop:true
 });
 var swiperGeneralNews = new Swiper(".swiper-general-news-container", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 20,
   slidesPerGroup: 1,
   centerSlide: "true",
   grabCursor: "true",
   fade:"true",
   speed:1000,
-  // breakpoints: {
-  //   480: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20
-  //   },
-
-  //   720: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 30
-  //   },
-
-  //   900: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 40
-  //   }
-  // },
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    740:{
+      slidesPerView: 2,
+      spaceBetween: 20,
+    }
+  },
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,

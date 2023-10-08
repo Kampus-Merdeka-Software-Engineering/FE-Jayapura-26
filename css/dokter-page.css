@@ -32,7 +32,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 66.58px 10%;
+    padding: 66.58px 10vw;
 }
 
 #errorpage{
@@ -81,8 +81,7 @@ main{
 }
 
 #dokter-pp{
-    width: 230px;
-    height: 230px;
+    width: 25%;
     border-radius: 50px;
     border: solid 2px #4472c4;
     object-fit: cover;
@@ -103,7 +102,7 @@ main{
     color: white;
     border: none;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 1.3vw;
     border-radius: 10px;
     padding: 10px 20px;
     text-decoration: none;
@@ -131,11 +130,12 @@ main{
 }
 
 .dokter-nameetc h1{
-    font-size: 37px;
+    font-size: 2vw;
     white-space: nowrap;
 }
 
 .dokter-nameetc h3{
+    font-size: 1.4vw;
     margin-top: 5px;
     font-weight: 100;
 }
@@ -157,11 +157,18 @@ main{
     display: flex;
     flex-direction: column;
     margin-left: 40px;
-    width: 170px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: nowrap;
 }
 
-.jadwal-text{
-    margin-left: 5px;
+.dokter-jadwal h3{
+    font-size: 1.5vw;
+}
+
+.dokter-jadwal p{
+    font-size: 1.2vw;
 }
 
 /*form*/
@@ -178,7 +185,6 @@ main{
     border-radius: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
     width: 60%;
 }
 
@@ -313,11 +319,50 @@ main{
     background-color: #04befe;
 }
 
-@media (max-width:1020px) {
-    .dokter-nameetc h1{
-        font-size: 30px;
-    }
+#subloading{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #8b8b8b70;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
+#submit-success,#submit-failed{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #8b8b8b70;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit-success div,#submit-failed div{
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+#subsucbutton,#subfailbutton{
+    padding: 10px 20px;
+}
+
+@media (max-width:1020px) {
     .formdokter{
         width: 75%;
     }
@@ -326,6 +371,9 @@ main{
 @media (max-width:710px) {
     .dokter-container{
         flex-direction: column;
+    }
+    #dokter-pp{
+        width: 200px;
     }
     .dokter-about{
         margin: 0;
@@ -338,6 +386,9 @@ main{
         margin-top: 20px;
         font-size: 23px;
     }
+    .dokter-nameetc h3{
+        font-size: 15px;
+    }
     .dokter-inform{
         margin: 0;
         margin-bottom: 20px;
@@ -345,13 +396,17 @@ main{
     .dokter-about button{
         font-size: 20px;
     }
-
-    /*from adjust*/
-
-    #sticky-daftar{
-        width: 50%;
+    .dokter-jadwal{
+        margin: 20px 0 0 0;
+    }
+    .dokter-jadwal h3{
+        font-size: 20px;
+    }
+    .dokter-jadwal p{
+        font-size: 17px;
     }
 
+    /*from adjust*/
     .formdokter{
         width: 100%;
     }
@@ -368,6 +423,31 @@ main{
         margin-top: 30px;
     }
     
+}
+@media (max-width:440px) {
+    .title{
+        font-size: 25px;
+    }
+    .dokter-inform{
+        gap: 10px;
+        justify-content: center;
+    }
+    .dokter-nameetc h1{
+        margin-top: 20px;
+        font-size: 17px;
+    }
+    .dokter-jadwal h3{
+        font-size: 14px;
+    }
+    .dokter-jadwal p{
+        font-size: 13px;
+    }
+
+    /*form adjust*/
+    #formdt{
+        border-radius: 5px;
+    }
+
 }
 /* footer */
 footer{
