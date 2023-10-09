@@ -375,7 +375,6 @@ function getNextDayOfWeek(dayOfWeek) {
   }
 
 function inputjaddok(poli) {
-    console.log(poli)
     var jadwali = document.getElementById("jadwal-input");
     jadwali.innerHTML = "";
     if (!poli) {
@@ -384,7 +383,6 @@ function inputjaddok(poli) {
     var doktername = document.getElementById("dokterinput").value;
     poliData[poli].forEach(function(x){
         if (x.nama==doktername) {
-            console.log(x.nama +" : "+x.jadwal)
             var no=1;
             x.jadwal.forEach(function(i){
                 var idradio = `radjad${no}`
@@ -466,7 +464,6 @@ if (poliTerpilih) {
     inputTanggal.setAttribute("max",tahun + "-" + bulan + "-" + tanggal);
 
     document.getElementById('formdt').addEventListener('submit',function(event) {
-        console.log("fungsi submit berjalan");
         event.preventDefault();
         var jenisk = document.getElementById("jenis-kelamin")
         var dokinp = document.getElementById("dokterinput")

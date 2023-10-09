@@ -26,15 +26,10 @@ fetch('https://be-jayapura-26-production.up.railway.app/home')
     return response.json();
   })
   .then(function(data) {
-    console.log('Data JSON:', data);
     review = data;
-    console.log('Variabel "review":', review);
     arrayGoodReview = review["goodReview"];
     arrayBadReview = review["badReview"];
-    console.log("ini good ",arrayGoodReview)
-    console.log("ini BadReview",arrayBadReview)
-    maxclck = (arrayGoodReview.length - arrayGoodReview.length % 3)/3
-    console.log("imi maxclick",maxclck)
+    maxclck = (arrayGoodReview.length - arrayGoodReview.length % 3)/3;
     addGoodReview();
     badrview();
   })
@@ -99,7 +94,6 @@ function badrview() {
 
 
 function addGoodReview() {
-    console.log("perbandingan",fclick,maxclck)
     if (fclick<maxclck) {
         fclick = fclick+1
     } else {
@@ -181,7 +175,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => response.json())
         .then(data => {
-            console.log("Data berhasil dikirim:", data);
             loading.style.display = "none";
             document.getElementById("submit-success").style.display = "flex";
         })

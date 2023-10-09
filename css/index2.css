@@ -692,7 +692,7 @@ section {
 .good-review p {
     height: 100px;
     overflow: auto;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
     padding: 5px 10px;
     border: 1px solid black;
     width: 90%;
@@ -807,7 +807,7 @@ section {
     height: 100px;
     word-wrap: break-word;
     overflow: auto;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
     padding: 5px 10px;
     border: 1px solid black;
 }
